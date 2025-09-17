@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="style.css">
+        <title>Validation form</title>
+    </head>
+    <body>
+        <div>
+                <form id="myForm">
+                <h1>Registration form</h1>
+                <label><h5>FISRT NAME:</h5></label>
+                <input
+                    type="text"
+                    class="form-control"
+                    name="firstname"
+                    required
+                    placeholder="First-Name"
+                /><span id="firstErr" class="errorMessage"></span>
+                <span id="Error" class="errorMessage"></span>
+                <br />
+                <br />
+
+                <label><h5>LAST NAME:</h5></label><br>
+
+                <input
+                    type="text"
+                    class="form-control1"
+                    name="lastname"
+                    required
+                    placeholder="Last-Name"
+                /><br /><span id="lastErr" class="errorMessage"></span>
+                <br />
+                <br />
+
+                <label><h5>AGE:</h5></label><br>
+                <input
+                    type="number"
+                    id="age"
+                    name="age"
+                    required
+                    placeholder="Age"
+                /><br /><br />
+                <div id="ageErr" class="errorMessage"></div>
+
+                <div>
+                    <label><h5>GENEDR:</h5></label><br>
+
+                    <!----<input type="checkbox" name="option" value="1" /> male<br />
+                <input type="checkbox" name="option" value="2" /> female<br />
+                
+                <input
+                    type="checkbox"
+                    name="option"
+                    value="3"
+                />Other<br /><br /> -->
+                    
+                        <input
+                            type="checkbox"
+                            class="male"
+                            name="option"
+                            value="1"
+                        />MALE
+                    <br />
+                    
+                        <input
+                            type="checkbox"
+                            class="female"
+                            name="option"
+                            value="2"
+                        />WOMEN
+                    <br />
+                    
+                        <input
+                            type="checkbox"
+                            class="other"
+                            name="option"
+                            value="3"
+                        />OTHER
+                    <br /><br />
+
+                    <label><h5>PHONE NUMBER:</h5></label><br>
+                    <input
+                        type="number"
+                       name="number"
+                         required
+                        id="phone"
+                        
+                        placeholder="123-456-7890"
+                    /><br />
+                    <span id="phoneErr" class="errorMessage"></span>
+                </div>
+                <br />
+               <label><select class="form-select" aria-label="Default select example"></label>
+                   <option selected>SELECT CITY</option>
+                    <option value="1">Indore</option>
+                    <option value="2">Pune</option>
+                    <option value="3">Mumbai</option>
+                    <option value="3">Delhi</option>
+                    <option value="3">Other</option>
+                </select>
+                <br /><br />
+                <!--<div class="Marital">-->
+                    <label><h5>Marital Status:</h5><span style="color: red;"></span></label><br/>
+                    <input type="radio" name="Marital" value="married" class="married"/>Married
+                    <br />
+                    <input
+                        type="radio"
+                        name="Marital"
+                        value="unmarried"
+                        class="unmarried"
+                        required
+                    />Unmarried
+                    <br />
+                    <input type="radio" name="Marital" value="Divorced" class="divorced" required />Divorced
+                </div>
+                <br /><br />
+
+                <div>
+                <label><h5>Bill:</h5></label><br>
+                    <input
+                        type="number"
+                        required
+                        id="cost"
+                        name="bill"
+                        placeholder="Cost"
+                    />
+                    
+                    <input
+                        type="text"
+                        id="gst"
+                        readonly
+                        name="bill"
+                        placeholder="GST%"
+                    />
+                    <input
+                        type="text"
+                        id="totalcost"
+                        readonly
+                        placeholder="Total cost"
+                    />
+                </div>
+                <br /><br />
+              <label><h5> ADDRESS:</h5></label><br />
+                <!--<label for="validationCustom05" class="form-label"></label>-->
+                <input
+                    type="address"
+                    required
+                    id="address"
+                    name="address"
+                    placeholder="Address"
+                />
+                <span id="addressErr" name="errorMessage"></span>
+                <br /><br />
+               <label><h5> PASSWORD:</h5> </label><br />
+                <input
+                    type="text"
+                    required
+                    id="password"
+                    name="password"
+                    placeholder="password"
+                /><br />
+                <span id="passErr" class="errorMessage"></span> <br />
+                <span id="capsErr" class="errorMessage"></span><br />
+                <span id="smallErr" class="errorMessage"></span><br />
+                <span id="numErr" class="errorMessage"></span><br />
+                <span id="charErr" class="errorMessage"></span>
+                <div class="col-12">
+                    <button
+                        class=" btn btn-primary"
+                        type="submit"
+                        id="submitBtn"
+                    >
+                        Submit form
+                    </button>
+                </div>
+            </form>
+            <div id="toast-container"></div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
